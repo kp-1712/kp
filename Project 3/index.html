@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Form Validation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gradient-bg">
+    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+      <div class="form-card p-4 rounded shadow-lg">
+        <div class="text-center">
+          <img src="download.jpg" alt="Welcome" class="img-fluid mb-3" style="max-width: 150px;">
+          <h2 class="text-gradient mb-3">Register Here</h2>
+        </div>
+        <form id="registrationForm" novalidate>
+          <!-- Full Name -->
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="invalid-feedback" id="nameError"></div>
+          </div>
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email ID</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="invalid-feedback" id="emailError"></div>
+          </div>
+          <!-- Phone Number -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-phone"></i></span>
+              <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="invalid-feedback" id="phoneError"></div>
+          </div>
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="invalid-feedback" id="passwordError"></div>
+          </div>
+          <!-- Confirm Password -->
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+            <div class="invalid-feedback" id="confirmPasswordError"></div>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-gradient w-100 mt-3">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
